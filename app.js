@@ -32,7 +32,7 @@ app.get('/users', user.list);
 
 
 var socket = new server({
-    httpServer: http.createServer(app).listen(1337,function(){
+    httpServer: http.createServer(app).listen(process.env.PORT || 5000,function(){
     	console.log("Server Listening ");
     })
 });
